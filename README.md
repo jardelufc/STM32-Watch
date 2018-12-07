@@ -46,10 +46,10 @@ Um smart watch feito utilizando uma STM32f030. Projeto de final da disciplina de
   
 OBS: Os três botões são configurados como input e pull-down no Stm32Cubemx.
 
-Alarme: o buzzer está ligado no PA4 configurado como output e nopull no Cube.
+- Alarme: o buzzer está ligado no PA4 configurado como output e nopull no Cube.
 Quando o as horas configuradas no alarme são iguais as horas mostradas no menu do relógio, o buzzer é ativado e deve ser desativado apertando o botão principal.
 
-Estimador de batimento cardíaco:
+- Estimador de batimento cardíaco:
 O pino PA6 foi configurado como ADC no Cube para ler os valores analógicos do sensor e converter para digital.
 O ADC mede dois valores captados pelo sensor com um delay de 20ms entre eles, se os valores tiverem uma diferença muito grande, quer dizer que houve uma pulsação do coração, entrão pisca na tela um símbolo representando o coração. O tempo entre cada pulso estima uma fequência cardíaca.
   
