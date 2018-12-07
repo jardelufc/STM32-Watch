@@ -26,29 +26,33 @@ Um smart watch feito utilizando uma STM32f030. Projeto de final da disciplina de
   O relógio tem 4 principais modos:
   
   - Menu:
-  Mostra as horas e a data (com o dia da semana).
+  Mostra as horas e a data (com o dia da semana e ano de 4 dígitos).
   
   - Mudar hora e data:
-  Mostra a hora e data anterior e a depois de mudada.
+  Mostra a hora e data anterior e a depois de mudada. Para entrar nesse modo basta apertar o botão 1 dentro do menu. Apertando o botão 2 pode-se aumentar os valores mostrados, apertando o botão 1, pode-se mudar entre horas, minutos, dia, mês e dia da semana. 
   
   - Muda hora do alarme:
-  Mostra a hora anterior do alarme e a depois de mudada.
+  Mostra a hora anterior do alarme e a depois de mudada. Para entrar nesse modo basta apertar o botão 2 dentro do menu. Apertando o botão 2 novamente aumenta o valor das horas e minutos do alarme e apertando o botão 1 alterna entre minutos, horas e volta pro menu.
   
   - Cronômetro:
   Cronometragem começando de zero.
   
   Os 3 botões têm funções distintas:
-  - Botão 1 (PA0): Este é o botão principal, que vai trocando os modos no relógio.
+  - Botão 1 (PA0): Este é o botão principal, que vai trocando os modos no relógio. Também desativa o alarme quando acionado
   
-  - Botão 2 (PA3): Este é o botão para alterar os valores de hora, data e alarme. No menu este é o botão para entrar no modo de mudar a hora do alarme.
+  - Botão 2 (PA1): Este é o botão para alterar os valores de hora, data e alarme. No menu este é o botão para entrar no modo de mudar a hora do alarme.
   
-  - Botão 3(
+  - Botão 3(PA5): Este é o botão para entrar no modo cronômetro.
   
+OBS: Os três botões são configurados como input e pull-down no Stm32Cubemx.
+
+Alarme: o buzzer está ligado no PA4 configurado como output e nopull no Cube.
+Quando o as horas configuradas no alarme são iguais as horas mostradas no menu do relógio, o buzzer é ativado e deve ser desativado apertando o botão principal.
+
+Estimador de batimento cardíaco:
+O pino PA6 foi configurado como ADC no Cube para ler os valores analógicos do sensor e converter para digital.
+O ADC mede dois valores captados pelo sensor com um delay de 20ms entre eles, se os valores tiverem uma diferença muito grande, quer dizer que houve uma pulsação do coração, entrão pisca na tela um símbolo representando o coração. O tempo entre cada pulso estima uma fequência cardíaca.
   
-  
-  
- 
- 
   Limitações:
   
   A implementação desse projeto apresentou algumas limitações, principalmente no que diz respeito a memória flash, pois a memória teve grande parte consumida para o display 128x64 e pela inicialização do RTC interno. Além Disso, o RTC do microprocessador utilizado é um pouco impreciso, aproximadamente 20% de adiatamento em relação ao tempo real. 
