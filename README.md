@@ -55,7 +55,9 @@ O ADC mede dois valores captados pelo sensor com um delay de 20ms entre eles, se
   
   Limitações:
   
-  A implementação desse projeto apresentou algumas limitações, principalmente no que diz respeito a memória flash, pois a memória teve grande parte consumida para o display 128x64 e pela inicialização do RTC interno. Além Disso, o RTC do microprocessador utilizado é um pouco impreciso, aproximadamente 20% de adiatamento em relação ao tempo real. 
+  A implementação desse projeto apresentou algumas limitações, principalmente no que diz respeito a memória flash, pois a memória teve grande parte consumida para o display 128x64 e pela inicialização do RTC interno. Além Disso, o RTC do microprocessador utilizado é um pouco impreciso, aproximadamente 20% de adiatamento em relação ao tempo real.
+    O sensor de batimentos ky-039 quebrou nos testes e não foi possível aprimorar seu código para medição de frequência cardíaca.
+    A HAl_AlarmEventCallBack não funcionou como desejada, tendo que implementar o alarm usando comparações durante a execução do código.
   
   
   Código de terceiros:
