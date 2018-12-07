@@ -35,7 +35,7 @@ Um smart watch feito utilizando uma STM32f030. Projeto de final da disciplina de
   Mostra a hora anterior do alarme e a depois de mudada. Para entrar nesse modo basta apertar o botão 2 dentro do menu. Apertando o botão 2 novamente aumenta o valor das horas e minutos do alarme e apertando o botão 1 alterna entre minutos, horas e volta pro menu.
   
   - Cronômetro:
-  Cronometragem começando de zero.
+  Cronometragem começando de zero. Para entrar nesse modo basta apertar o botão 3 no menu. Apertando o botão 1 volta para o menu e apertando o 2 começa a contagem de tempo.
   
   Os 3 botões têm funções distintas:
   - Botão 1 (PA0): Este é o botão principal, que vai trocando os modos no relógio. Também desativa o alarme quando acionado
