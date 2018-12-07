@@ -1,0 +1,15 @@
+main.c:83:6:reverse	8	static
+main.c:95:5:intToStr	32	static
+main.c:115:6:set_time	40	static
+main.c:149:6:set_alarm	48	static
+main.c:174:6:get_time	48	static
+main.c:191:6:get_alarm	56	static
+main.c:204:6:display_alarm	8	static
+main.c:215:6:display_time	8	static
+main.c:254:6:display_hour	8	static
+main.c:262:6:display_date	8	static
+main.c:269:6:display_week	8	static
+main.c:309:6:to_do_on_alarm	8	static
+main.c:710:6:SystemClock_Config	88	static
+main.c:329:5:main	104	static
+main.c:953:6:_Error_Handler	0	static
